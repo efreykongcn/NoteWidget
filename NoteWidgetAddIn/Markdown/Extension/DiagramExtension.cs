@@ -13,6 +13,7 @@ namespace NoteWidgetAddIn.Markdown.Extension
     {
         internal class DiagramRender : ITemplateRender
         {
+            public ColorScheme ColorScheme { get; set; }
             public TemplateResourceType ResourceType { get; set; }
             public void Render(HtmlTemplate template)
             {
@@ -26,12 +27,25 @@ namespace NoteWidgetAddIn.Markdown.Extension
                     mermaidJsUrl = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js";
                 }
                 template.PostScripts.Add($"<script src=\"{mermaidJsUrl}\"></script>");
-                template.PostScripts.Add("<script>try { mermaid.initialize({ startOnLoad: true }); } catch (e) { }</script>");
+
+                if (ColorScheme == ColorScheme.Light)
+                {
+                    template.PostScripts.Add("<script>try { mermaid.initialize({ 'securityLevel': 'loose', 'theme': 'forest', startOnLoad: true }); } catch (e) { }</script>");
+                }
+                else if (ColorScheme == ColorScheme.Dark)
+                {
+                    template.PostScripts.Add("<script>try { mermaid.initialize({ 'securityLevel': 'loose', 'theme': 'dark', startOnLoad: true }); } catch (e) { }</script>");
+                }
+                else //Use System Settings
+                {
+                    template.PostScripts.Add("<script>if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){ try { mermaid.initialize({ 'securityLevel': 'loose', 'theme': 'dark', startOnLoad: true }); } catch (e) { } } else {try { mermaid.initialize({ 'securityLevel': 'loose', 'theme': 'forest', startOnLoad: true }); } catch (e) { }}</script>");
+                }
             }
         }
         public void Setup(HtmlTemplateBuilder builder, TemplateResourceType resourceType)
         {
-            builder.Renders.Add(new DiagramRender { ResourceType = resourceType });
+            var scheme = Enum.TryParse<ColorScheme>(Properties.Settings.Default.Markdown_ColorScheme ?? String.Empty, out var result) ? result : ColorScheme.System;
+            builder.Renders.Add(new DiagramRender { ResourceType = resourceType, ColorScheme = scheme });
         }
     }
 }

@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoteWidgetTests", "NoteWidgetTests\NoteWidgetTests.csproj", "{FB85C7C6-5DB7-4EFB-9BC4-AFFF33C1E3EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteWidgetAddIn", "NoteWidgetAddIn\NoteWidgetAddIn.csproj", "{280104F5-13BA-4193-BFF5-5A5C48261640}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{732EB35D-6A00-4E3C-B1AF-2A7A0ABF10D2}"
+	ProjectSection(SolutionItems) = preProject
+		cheatsheet_snapshot.png = cheatsheet_snapshot.png
+		LICENSE.MD = LICENSE.MD
+		powershell-copyfile-runas.bat = powershell-copyfile-runas.bat
+		preview_snapshot.png = preview_snapshot.png
+		README.MD = README.MD
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "NoteWidgetAddIn.Setup", "NoteWidgetAddInSetup\NoteWidgetAddInSetup.vdproj", "{1D540207-035C-40B7-BD5B-48FF023152C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Publish|Any CPU = Publish|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB85C7C6-5DB7-4EFB-9BC4-AFFF33C1E3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB85C7C6-5DB7-4EFB-9BC4-AFFF33C1E3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB85C7C6-5DB7-4EFB-9BC4-AFFF33C1E3EA}.Publish|Any CPU.ActiveCfg = Publish|Any CPU
+		{FB85C7C6-5DB7-4EFB-9BC4-AFFF33C1E3EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB85C7C6-5DB7-4EFB-9BC4-AFFF33C1E3EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{280104F5-13BA-4193-BFF5-5A5C48261640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{280104F5-13BA-4193-BFF5-5A5C48261640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{280104F5-13BA-4193-BFF5-5A5C48261640}.Publish|Any CPU.ActiveCfg = Publish|Any CPU
+		{280104F5-13BA-4193-BFF5-5A5C48261640}.Publish|Any CPU.Build.0 = Publish|Any CPU
+		{280104F5-13BA-4193-BFF5-5A5C48261640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{280104F5-13BA-4193-BFF5-5A5C48261640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D540207-035C-40B7-BD5B-48FF023152C2}.Debug|Any CPU.ActiveCfg = Debug
+		{1D540207-035C-40B7-BD5B-48FF023152C2}.Debug|Any CPU.Build.0 = Debug
+		{1D540207-035C-40B7-BD5B-48FF023152C2}.Publish|Any CPU.ActiveCfg = Publish
+		{1D540207-035C-40B7-BD5B-48FF023152C2}.Release|Any CPU.ActiveCfg = Release
+		{1D540207-035C-40B7-BD5B-48FF023152C2}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6124B423-3309-464C-A107-BD5DD68ED3A3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,43 @@
+﻿<one:Notebook xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" name="UnitTestNote" nickname="UnitTestNote" ID="{3A4A4CFB-8321-4CB2-A1AF-038CD1A1AC68}{1}{B0}" path="C:\Users\efrey\iCloudDrive\OneNote\UnitTestNote" lastModifiedTime="2021-12-21T07:57:54.000Z" color="#ADE792" isCurrentlyViewed="true">
+	<one:Section name="Introduction" ID="{5E3A0919-1331-41D5-B19C-4AE7F96D7626}{1}{B0}" path="C:\OneNote\UnitTestNote\Introduction.one" lastModifiedTime="2021-12-21T07:48:00.000Z" color="#8AA8E4">
+		<one:Page ID="{5E3A0919-1331-41D5-B19C-4AE7F96D7626}{1}{E19529340608983392449520151492106384070007221}" name="无标题页" dateTime="2021-12-21T07:48:00.000Z" lastModifiedTime="2021-12-21T07:48:00.000Z" pageLevel="1" />
+	</one:Section>
+	<one:Section name="Python" ID="{842240F6-F77A-4421-B2F6-44510E03ABAB}{1}{B0}" path="C:\OneNote\UnitTestNote\Python.one" lastModifiedTime="2021-12-21T07:52:20.000Z" color="#B49EDE">
+		<one:Page ID="{842240F6-F77A-4421-B2F6-44510E03ABAB}{1}{E19483954550601460158520165992657368372596901}" name="Python beginner" dateTime="2021-12-21T07:51:12.000Z" lastModifiedTime="2021-12-21T07:52:20.000Z" pageLevel="1" />
+	</one:Section>
+	<one:SectionGroup name="OneNote_RecycleBin" ID="{0977042E-C5AB-43E4-896C-42551B4E90D1}{1}{B0}" path="C:\OneNote\UnitTestNote\OneNote_RecycleBin" lastModifiedTime="2021-12-21T07:54:06.000Z" isRecycleBin="true">
+		<one:Section name="删除的页面" ID="{8144302F-D049-4C40-B131-37C51FAC2BD5}{1}{B0}" path="C:\OneNote\UnitTestNote\OneNote_RecycleBin\OneNote_DeletedPages.one" lastModifiedTime="2021-12-21T07:54:00.000Z" color="#E1E1E1" isInRecycleBin="true" isDeletedPages="true" />
+		<one:Section name="JavaBasic" ID="{4DACF77F-55C1-4940-8D0E-26DC271C629A}{1}{B0}" path="C:\OneNote\UnitTestNote\OneNote_RecycleBin\JavaBasic.one" lastModifiedTime="2021-12-21T07:49:11.000Z" color="#4DBCCA" isInRecycleBin="true">
+			<one:Page ID="{4DACF77F-55C1-4940-8D0E-26DC271C629A}{1}{E1948411626088136405761935395127242460320291}" name="无标题页" dateTime="2021-12-21T07:49:09.000Z" lastModifiedTime="2021-12-21T07:49:09.000Z" pageLevel="1" isInRecycleBin="true" />
+		</one:Section>
+		<one:Section name="Spring" ID="{CAE069DF-B4EA-4C11-9C9F-DF0B682D64B7}{1}{B0}" path="C:\OneNote\UnitTestNote\OneNote_RecycleBin\Spring.one" lastModifiedTime="2021-12-21T07:49:21.000Z" color="#BA7575" isInRecycleBin="true">
+			<one:Page ID="{CAE069DF-B4EA-4C11-9C9F-DF0B682D64B7}{1}{E19498705105570891500020127691851484253349671}" name="无标题页" dateTime="2021-12-21T07:49:20.000Z" lastModifiedTime="2021-12-21T07:49:20.000Z" pageLevel="1" isInRecycleBin="true" />
+		</one:Section>
+		<one:Section name="Vue" ID="{038BA1DE-0C9B-45A8-843E-FA99D4786F04}{1}{B0}" path="C:\OneNote\UnitTestNote\OneNote_RecycleBin\Vue.one" lastModifiedTime="2021-12-21T07:50:08.000Z" color="#9595AA" isInRecycleBin="true">
+			<one:Page ID="{038BA1DE-0C9B-45A8-843E-FA99D4786F04}{1}{E1955761423221558987331990857641169888557371}" name="无标题页" dateTime="2021-12-21T07:50:06.000Z" lastModifiedTime="2021-12-21T07:50:06.000Z" pageLevel="1" isInRecycleBin="true" />
+		</one:Section>
+		<one:Section name="Javascript" ID="{8E4E0F2E-EFAD-4088-9977-A82D1BB80005}{1}{B0}" path="C:\OneNote\UnitTestNote\OneNote_RecycleBin\Javascript.one" lastModifiedTime="2021-12-21T07:50:15.000Z" color="#8AA8E4" isInRecycleBin="true">
+			<one:Page ID="{8E4E0F2E-EFAD-4088-9977-A82D1BB80005}{1}{E1957634087220653134231979511579163656185931}" name="无标题页" dateTime="2021-12-21T07:50:14.000Z" lastModifiedTime="2021-12-21T07:50:14.000Z" pageLevel="1" isInRecycleBin="true" />
+		</one:Section>
+		<one:Section name="React" ID="{DA9C74DA-FD4A-45CE-8B2D-AED23B4B5254}{1}{B0}" path="C:\OneNote\UnitTestNote\OneNote_RecycleBin\React.one" lastModifiedTime="2021-12-21T07:50:25.000Z" color="#FFD869" isInRecycleBin="true">
+			<one:Page ID="{DA9C74DA-FD4A-45CE-8B2D-AED23B4B5254}{1}{E19566604466481888139820146243767966841691301}" name="无标题页" dateTime="2021-12-21T07:50:24.000Z" lastModifiedTime="2021-12-21T07:50:24.000Z" pageLevel="1" isInRecycleBin="true" />
+		</one:Section>
+		<one:Section name="AngularJS" ID="{CE151E72-95DB-43BC-BE24-A18ACB3F7B72}{1}{B0}" path="C:\OneNote\UnitTestNote\OneNote_RecycleBin\AngularJS.one" lastModifiedTime="2021-12-21T07:50:46.000Z" color="#B7C997" isInRecycleBin="true">
+			<one:Page ID="{CE151E72-95DB-43BC-BE24-A18ACB3F7B72}{1}{E1947123658719430798101979687631135170574531}" name="无标题页" dateTime="2021-12-21T07:50:45.000Z" lastModifiedTime="2021-12-21T07:50:45.000Z" pageLevel="1" isInRecycleBin="true" />
+		</one:Section>
+	</one:SectionGroup>
+	<one:SectionGroup name="Backend" ID="{72F6EE87-4B69-405F-A5A8-63FA2D683444}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend" lastModifiedTime="2021-12-21T07:57:54.000Z" isCurrentlyViewed="true">
+		<one:Section name="Go" ID="{B75B0FB1-6DB5-4ED2-9C69-4060F8FB7FF8}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend\Go.one" lastModifiedTime="2021-12-21T07:55:24.000Z" color="#EE9597" isCurrentlyViewed="true">
+			<one:Page ID="{B75B0FB1-6DB5-4ED2-9C69-4060F8FB7FF8}{1}{E1954863573282337301011917182284793899649511}" name="Chapter 1" dateTime="2021-12-21T07:50:59.000Z" lastModifiedTime="2021-12-21T07:55:24.000Z" pageLevel="1" isCurrentlyViewed="true" />
+		</one:Section>
+		<one:SectionGroup name="DotNet" ID="{6F8F683A-D9FE-4CDD-8605-8BAA00E742EA}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend\DotNet" lastModifiedTime="2021-12-21T07:57:54.000Z">
+			<one:Section name="CSharp" ID="{443F89FE-0C2F-41D2-8FCA-B54E1F45349B}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend\DotNet\CSharp.one" lastModifiedTime="2021-12-21T07:56:53.000Z" color="#91BAAE">
+				<one:Page ID="{443F89FE-0C2F-41D2-8FCA-B54E1F45349B}{1}{E19554024442055462406520137364240064103627971}" name="Office Addin" dateTime="2021-12-21T07:52:40.000Z" lastModifiedTime="2021-12-21T07:56:29.000Z" pageLevel="1" />
+				<one:Page ID="{443F89FE-0C2F-41D2-8FCA-B54E1F45349B}{1}{E19524986248993555224420161066687775526316971}" name="OneNote add-in" dateTime="2021-12-21T07:56:34.000Z" lastModifiedTime="2021-12-21T07:56:47.000Z" pageLevel="2" />
+			</one:Section>
+			<one:Section name="FSharp" ID="{9CA0EF3E-A634-41E8-A1B7-821A01E657E2}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend\DotNet\FSharp.one" lastModifiedTime="2021-12-21T07:57:54.000Z" color="#F6B078">
+				<one:Page ID="{9CA0EF3E-A634-41E8-A1B7-821A01E657E2}{1}{E1949968395446988629731972422109116520132061}" name="Data Analyzation" dateTime="2021-12-21T07:54:26.000Z" lastModifiedTime="2021-12-21T07:57:54.000Z" pageLevel="1" />
+			</one:Section>
+		</one:SectionGroup>
+	</one:SectionGroup>
+</one:Notebook>

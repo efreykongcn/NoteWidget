@@ -1,0 +1,31 @@
+﻿<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{443F89FE-0C2F-41D2-8FCA-B54E1F45349B}{1}{E19524986248993555224420161066687775526316971}" name="OneNote add-in" dateTime="2021-12-21T07:56:34.000Z" lastModifiedTime="2021-12-23T09:56:04.000Z" pageLevel="2" isCurrentlyViewed="true" lang="en-US">
+	<one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="20.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="12.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:PageSettings RTL="false" color="automatic">
+		<one:PageSize>
+			<one:Automatic />
+		</one:PageSize>
+		<one:RuleLines visible="false" />
+	</one:PageSettings>
+	<one:Title lang="en-US">
+		<one:OE author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" creationTime="2021-12-21T07:56:47.000Z" lastModifiedTime="2021-12-21T07:56:51.000Z" objectID="{EAF63EB6-8F68-462C-9AA0-AA99594DBFBA}{15}{B0}" alignment="left" quickStyleIndex="0" style="font-family:Calibri;font-size:20.0pt">
+			<one:T>
+				<![CDATA[<span style='font-weight:bold'>OneNote add-in</span>]]></one:T>
+		</one:OE>
+	</one:Title>
+	<one:Outline author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" lastModifiedTime="2021-12-23T09:56:02.000Z" objectID="{0087A395-3A67-4B34-BA2B-DCCF65F85CDC}{10}{B0}">
+		<one:Position x="36.0" y="86.4000015258789" z="0" />
+		<one:Size width="235.0433807373047" height="43.94527816772461" />
+		<one:OEChildren>
+			<one:OE creationTime="2021-12-23T09:55:24.000Z" lastModifiedTime="2021-12-23T09:55:48.000Z" objectID="{0087A395-3A67-4B34-BA2B-DCCF65F85CDC}{11}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[# How to develop an add-in for onenote]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T09:55:49.000Z" lastModifiedTime="2021-12-23T09:55:49.000Z" objectID="{0087A395-3A67-4B34-BA2B-DCCF65F85CDC}{19}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T09:55:50.000Z" lastModifiedTime="2021-12-23T09:56:02.000Z" objectID="{0087A395-3A67-4B34-BA2B-DCCF65F85CDC}{16}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[# Sample]]></one:T>
+			</one:OE>
+		</one:OEChildren>
+	</one:Outline>
+</one:Page>

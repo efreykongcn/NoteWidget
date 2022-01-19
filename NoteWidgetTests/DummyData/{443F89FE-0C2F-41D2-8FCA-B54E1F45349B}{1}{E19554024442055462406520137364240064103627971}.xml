@@ -1,0 +1,39 @@
+﻿<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{443F89FE-0C2F-41D2-8FCA-B54E1F45349B}{1}{E19554024442055462406520137364240064103627971}" name="Office Addin" dateTime="2021-12-21T07:52:40.000Z" lastModifiedTime="2021-12-23T14:58:44.000Z" pageLevel="1" isCurrentlyViewed="true" lang="en-US">
+	<one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="20.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="12.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:PageSettings RTL="false" color="automatic">
+		<one:PageSize>
+			<one:Automatic />
+		</one:PageSize>
+		<one:RuleLines visible="false" />
+	</one:PageSettings>
+	<one:Title lang="en-US">
+		<one:OE author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" creationTime="2021-12-21T07:55:39.000Z" lastModifiedTime="2021-12-21T07:56:30.000Z" objectID="{CF3178B8-782D-4FE2-BC94-763867512B51}{15}{B0}" alignment="left" quickStyleIndex="0" style="font-family:Calibri;font-size:20.0pt">
+			<one:T><![CDATA[Office Addin]]></one:T>
+		</one:OE>
+	</one:Title>
+	<one:Outline author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" lastModifiedTime="2021-12-23T09:56:19.000Z" objectID="{697E4E52-2C7D-4F4F-9EEE-E5506ABA16E5}{16}{B0}">
+		<one:Position x="36.0" y="104.400001525879" z="0" />
+		<one:Size width="205.9984283447265" height="87.89054107666016" />
+		<one:OEChildren>
+			<one:OE creationTime="2021-12-21T07:55:46.000Z" lastModifiedTime="2021-12-21T07:56:19.000Z" objectID="{697E4E52-2C7D-4F4F-9EEE-E5506ABA16E5}{17}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[# Office add-ins overview]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-21T07:55:53.000Z" lastModifiedTime="2021-12-21T07:55:53.000Z" objectID="{697E4E52-2C7D-4F4F-9EEE-E5506ABA16E5}{22}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-21T07:55:53.000Z" lastModifiedTime="2021-12-21T07:55:53.000Z" objectID="{697E4E52-2C7D-4F4F-9EEE-E5506ABA16E5}{25}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-21T07:55:54.000Z" lastModifiedTime="2021-12-23T09:56:19.000Z" objectID="{697E4E52-2C7D-4F4F-9EEE-E5506ABA16E5}{19}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[# How to develop an Office add-in]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T09:56:19.000Z" lastModifiedTime="2021-12-23T09:56:19.000Z" objectID="{1EFB87A6-5C23-4D52-9208-BBA3AC553CE1}{24}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt" lang="zh-CN">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T09:56:19.000Z" lastModifiedTime="2021-12-23T09:56:19.000Z" objectID="{1EFB87A6-5C23-4D52-9208-BBA3AC553CE1}{28}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt" lang="zh-CN">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+		</one:OEChildren>
+	</one:Outline>
+</one:Page>

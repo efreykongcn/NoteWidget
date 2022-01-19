@@ -1,0 +1,39 @@
+﻿<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{842240F6-F77A-4421-B2F6-44510E03ABAB}{1}{E19483954550601460158520165992657368372596901}" name="Python beginner" dateTime="2021-12-21T07:51:12.000Z" lastModifiedTime="2021-12-23T14:57:27.000Z" pageLevel="1" isCurrentlyViewed="true" lang="en-US">
+	<one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="20.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="12.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:PageSettings RTL="false" color="automatic">
+		<one:PageSize>
+			<one:Automatic />
+		</one:PageSize>
+		<one:RuleLines visible="false" />
+	</one:PageSettings>
+	<one:Title lang="en-US">
+		<one:OE author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" creationTime="2021-12-21T07:51:23.000Z" lastModifiedTime="2021-12-21T07:51:35.000Z" objectID="{FD847C4C-20FF-442C-9D8E-754D17BEE1B8}{15}{B0}" alignment="left" quickStyleIndex="0" style="font-family:Calibri;font-size:20.0pt">
+			<one:T><![CDATA[Python beginner]]></one:T>
+		</one:OE>
+	</one:Title>
+	<one:Outline author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" lastModifiedTime="2021-12-23T14:57:27.000Z" objectID="{FD847C4C-20FF-442C-9D8E-754D17BEE1B8}{31}{B0}">
+		<one:Position x="36.0" y="86.4000015258789" z="0" />
+		<one:Size width="164.9767761230469" height="87.89054107666016" />
+		<one:OEChildren>
+			<one:OE creationTime="2021-12-21T07:51:39.000Z" lastModifiedTime="2021-12-21T07:52:20.000Z" objectID="{FD847C4C-20FF-442C-9D8E-754D17BEE1B8}{32}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[# Hello world]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T09:55:01.000Z" lastModifiedTime="2021-12-23T09:55:01.000Z" objectID="{06FB9E97-E049-4B72-B95F-09BC1BDF4887}{21}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T09:55:02.000Z" lastModifiedTime="2021-12-23T09:55:14.000Z" objectID="{06FB9E97-E049-4B72-B95F-09BC1BDF4887}{24}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[I'm a newbee to Phython.]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T14:57:27.000Z" lastModifiedTime="2021-12-23T14:57:27.000Z" objectID="{E728EF02-D0F4-46CE-A5A3-F51836AC5F11}{10}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt" lang="zh-CN">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T14:57:27.000Z" lastModifiedTime="2021-12-23T14:57:27.000Z" objectID="{E728EF02-D0F4-46CE-A5A3-F51836AC5F11}{14}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt" lang="zh-CN">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T14:57:27.000Z" lastModifiedTime="2021-12-23T14:57:27.000Z" objectID="{E728EF02-D0F4-46CE-A5A3-F51836AC5F11}{17}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt" lang="zh-CN">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+		</one:OEChildren>
+	</one:Outline>
+</one:Page>

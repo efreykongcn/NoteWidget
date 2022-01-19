@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NoteWidget.AddIn.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Markdown_ColorScheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">System</Value>
+    </Setting>
+    <Setting Name="Markdown_HighlightTheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
+    <Setting Name="Markdown_Preview_Width" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1200</Value>
+    </Setting>
+    <Setting Name="Markdown_Preview_Height" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="Markdown_Preview_Singleton" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Markdown_CheatSheet_Width" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1500</Value>
+    </Setting>
+    <Setting Name="Markdown_CheatSheet_Height" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

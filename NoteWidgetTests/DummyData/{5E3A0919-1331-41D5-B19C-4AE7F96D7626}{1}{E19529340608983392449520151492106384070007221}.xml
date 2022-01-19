@@ -1,0 +1,33 @@
+﻿<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{5E3A0919-1331-41D5-B19C-4AE7F96D7626}{1}{E19529340608983392449520151492106384070007221}" name="无标题页" dateTime="2021-12-21T07:48:00.000Z" lastModifiedTime="2021-12-23T14:56:12.000Z" pageLevel="1" isCurrentlyViewed="true" lang="zh-CN">
+	<one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="20.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="12.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:PageSettings RTL="false" color="automatic">
+		<one:PageSize>
+			<one:Automatic />
+		</one:PageSize>
+		<one:RuleLines visible="false" />
+	</one:PageSettings>
+	<one:Title lang="zh-CN">
+		<one:OE author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" creationTime="2021-12-23T14:56:07.000Z" lastModifiedTime="2021-12-23T14:56:07.000Z" objectID="{23DE23F7-0255-4D9B-8E97-0598EEF226E0}{15}{B0}" alignment="left" quickStyleIndex="0">
+			<one:T><![CDATA[无标题页]]></one:T>
+		</one:OE>
+	</one:Title>
+	<one:Outline author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" lastModifiedTime="2021-12-23T14:56:12.000Z" objectID="{86B6B445-40B1-44DA-8C28-387DB958C791}{15}{B0}">
+		<one:Position x="36.0" y="86.4000015258789" z="0" />
+		<one:Size width="128.1797790527344" height="79.24945068359374" />
+		<one:OEChildren>
+			<one:OE creationTime="2021-12-23T14:55:50.000Z" lastModifiedTime="2021-12-23T14:55:50.000Z" objectID="{86B6B445-40B1-44DA-8C28-387DB958C791}{16}{B0}" alignment="left" quickStyleIndex="1">
+				<one:T><![CDATA[# 无标题页 ]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T14:55:50.000Z" lastModifiedTime="2021-12-23T14:55:50.000Z" objectID="{86B6B445-40B1-44DA-8C28-387DB958C791}{18}{B0}" alignment="left" quickStyleIndex="1">
+				<one:T><![CDATA[## Hello world ]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T14:55:50.000Z" lastModifiedTime="2021-12-23T14:55:50.000Z" objectID="{86B6B445-40B1-44DA-8C28-387DB958C791}{20}{B0}" alignment="left" quickStyleIndex="1">
+				<one:T><![CDATA[This is a test]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-23T14:55:50.000Z" lastModifiedTime="2021-12-23T14:55:50.000Z" objectID="{86B6B445-40B1-44DA-8C28-387DB958C791}{22}{B0}" alignment="left" quickStyleIndex="1">
+				<one:T><![CDATA[## Test ]]></one:T>
+			</one:OE>
+		</one:OEChildren>
+	</one:Outline>
+</one:Page>

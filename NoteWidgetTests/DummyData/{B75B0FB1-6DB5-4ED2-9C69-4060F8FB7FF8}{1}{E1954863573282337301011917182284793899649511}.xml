@@ -1,0 +1,36 @@
+﻿<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{B75B0FB1-6DB5-4ED2-9C69-4060F8FB7FF8}{1}{E1954863573282337301011917182284793899649511}" name="Chapter 1" dateTime="2021-12-21T07:50:59.000Z" lastModifiedTime="2021-12-23T14:57:56.000Z" pageLevel="1" isCurrentlyViewed="true" lang="en-US">
+	<one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="20.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="12.0" spaceBefore="0.0" spaceAfter="0.0" />
+	<one:PageSettings RTL="false" color="automatic">
+		<one:PageSize>
+			<one:Automatic />
+		</one:PageSize>
+		<one:RuleLines visible="false" />
+	</one:PageSettings>
+	<one:Title lang="en-US">
+		<one:OE author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" creationTime="2021-12-21T07:54:55.000Z" lastModifiedTime="2021-12-21T07:55:08.000Z" objectID="{0D3D4BA2-30B4-42D9-A5E7-D2EF3B96813A}{15}{B0}" alignment="left" quickStyleIndex="0" style="font-family:Calibri;font-size:20.0pt">
+			<one:T><![CDATA[Chapter 1]]></one:T>
+		</one:OE>
+	</one:Title>
+	<one:Outline author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" lastModifiedTime="2021-12-21T07:55:24.000Z" objectID="{31AC1A0E-D5D0-46D0-A122-BF14FDDCF5B3}{11}{B0}">
+		<one:Position x="36.0" y="86.4000015258789" z="0" />
+		<one:Size width="91.61708068847656" height="73.24212646484374" />
+		<one:OEChildren>
+			<one:OE creationTime="2021-12-21T07:55:10.000Z" lastModifiedTime="2021-12-21T07:55:16.000Z" objectID="{31AC1A0E-D5D0-46D0-A122-BF14FDDCF5B3}{12}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[# Golang]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-21T07:55:18.000Z" lastModifiedTime="2021-12-21T07:55:18.000Z" objectID="{31AC1A0E-D5D0-46D0-A122-BF14FDDCF5B3}{19}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-21T07:55:21.000Z" lastModifiedTime="2021-12-21T07:55:24.000Z" objectID="{31AC1A0E-D5D0-46D0-A122-BF14FDDCF5B3}{16}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[Gooooooo]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-21T07:55:24.000Z" lastModifiedTime="2021-12-21T07:55:24.000Z" objectID="{31AC1A0E-D5D0-46D0-A122-BF14FDDCF5B3}{25}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+			<one:OE creationTime="2021-12-21T07:55:24.000Z" lastModifiedTime="2021-12-21T07:55:24.000Z" objectID="{31AC1A0E-D5D0-46D0-A122-BF14FDDCF5B3}{22}{B0}" alignment="left" quickStyleIndex="1" style="font-family:Calibri;font-size:12.0pt">
+				<one:T><![CDATA[]]></one:T>
+			</one:OE>
+		</one:OEChildren>
+	</one:Outline>
+</one:Page>

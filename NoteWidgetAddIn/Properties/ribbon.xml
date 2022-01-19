@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" loadImage="GetImage">
+	<ribbon>
+		<tabs>
+			<tab idMso="TabHome">
+				<group id="groupNoteWidgetMarkdown" label="Markdown">
+					<button id="viewMarkdownAsHtmlButton" size="large" 
+							label="Preview"
+							screentip="Preview markdown content as Html document" 
+							onAction="PreviewMarkdownCmd" 
+							image="markdown.png"
+                            />
+                    <button id="markdownCheatsheetButton" size="large"
+                            label="Cheatsheet"
+                            screentip="View markdown cheatsheet"
+                            onAction="MarkdownCheatsheetCmd"
+                            image="markdownflag.png"
+                            />
+                    <button id="widgetAdvancedSettings" size="large"
+                            label="Settings"
+                            screentip="Advanced settings"
+                            onAction="WidgetAdvancedSettingsCmd"
+                            image="settings.png"
+                            />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+	<contextMenus>
+		<contextMenu idMso="ContextMenuNotebook">
+			<menuSeparator id="ctxNoteWidgetNotebookSeparator" />
+			<menu id="ctxExportToPathNotebook" label="Export Notebook To" imageMso="FileSaveAsContextualItem">
+				<button id="ctxExportToPathNotebookButton"					
+					label ="Hierarchical files..."
+					screentip="Export each page a file with hierarchical"
+					onAction="ExportPathCmd"
+					tag="Notebook" />
+				<button id="ctxExportToFileNotebookButton"
+					label ="File..."
+					screentip="Export all pages into one file"
+					onAction="ExportFileCmd"
+					tag="Notebook" />
+			</menu>
+		</contextMenu>
+        <contextMenu idMso="ContextMenuSectionGroup">
+			<menuSeparator id="ctxNoteWidgetSectionGrouptSeparator" />
+			<menu id="ctxExportToPathSectionGroup" label="Export Section Group To" imageMso="FileSaveAsContextualItem">
+				<button id="ctxExportToPathSectionGroupButton"
+					label ="Hierarchical files..."
+					screentip="Export each page a file with hierarchical"
+					onAction="ExportPathCmd"
+					tag="SectionGroup" />
+				<button id="ctxExportToFileSectionGroupButton"
+					label ="File..."
+					screentip="Export all pages into one file"
+					onAction="ExportFileCmd"
+					tag="SectionGroup" />
+			</menu>
+		</contextMenu>
+		<contextMenu idMso="ContextMenuSection">
+			<menuSeparator id="ctxNoteWidgetSectionSeparator" />
+			<menu id="ctxExportToPathSection" label="Export Section To" imageMso="FileSaveAsContextualItem">
+				<button id="ctxExportToPathSectionButton"
+					label ="Hierarchical files..."
+					screentip="Export each page a file with hierarchical"
+					onAction="ExportPathCmd"
+					tag="Section" />
+				<button id="ctxExportToFileSectionButton"
+					label ="File..."
+					screentip="Export all pages into one file"
+					onAction="ExportFileCmd"
+					tag="Section" />
+			</menu>
+		</contextMenu>
+
+		<contextMenu idMso="ContextMenuPage">
+            <menuSeparator id="ctxNoteWidgetPageSeparator" />
+            <!--<button id="ctxNewMarkdownPageButton"
+				label ="New Markdown Page"
+				imageMso="NewPageCtxItem"
+				screentip="Create a new markdown page"
+				onAction="NewMarkdownPageCommand"
+				tag="Page" />-->
+			<button id="ctxExportToFilePageButton"
+				label ="Export Page To File..."
+				imageMso="FileSaveAsContextualItem"
+				screentip="Export all pages into one file"
+				onAction="ExportFileCmd"
+				tag="Page" />
+		</contextMenu>
+        <!--<contextMenu idMso="ContextMenuPageArea">
+            <menuSeparator id="ctxNoteWidgetPageAreaPageSeparator" />
+            <button id="ctxNewMarkdownPagePageAreaButton"
+				label ="New Markdown Page"
+				imageMso="NewPageCtxItem"
+				screentip="Create a new markdown page"
+				onAction="NewMarkdownPageCommand"
+				tag="Page" />
+        </contextMenu>-->
+	</contextMenus>
+</customUI>
+

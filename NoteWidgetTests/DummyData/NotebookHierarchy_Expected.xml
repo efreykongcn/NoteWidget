@@ -1,0 +1,23 @@
+﻿<one:Notebook xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" name="UnitTestNote" nickname="UnitTestNote" ID="{3A4A4CFB-8321-4CB2-A1AF-038CD1A1AC68}{1}{B0}" path="C:\Users\efrey\iCloudDrive\OneNote\UnitTestNote" lastModifiedTime="2021-12-21T07:57:54.000Z" color="#ADE792" isCurrentlyViewed="true">
+	<one:Section name="Introduction" ID="{5E3A0919-1331-41D5-B19C-4AE7F96D7626}{1}{B0}" path="C:\OneNote\UnitTestNote\Introduction.one" lastModifiedTime="2021-12-21T07:48:00.000Z" color="#8AA8E4">
+		<one:Page ID="{5E3A0919-1331-41D5-B19C-4AE7F96D7626}{1}{E19529340608983392449520151492106384070007221}" name="无标题页" dateTime="2021-12-21T07:48:00.000Z" lastModifiedTime="2021-12-21T07:48:00.000Z" pageLevel="1" />
+	</one:Section>
+	<one:Section name="Python" ID="{842240F6-F77A-4421-B2F6-44510E03ABAB}{1}{B0}" path="C:\OneNote\UnitTestNote\Python.one" lastModifiedTime="2021-12-21T07:52:20.000Z" color="#B49EDE">
+		<one:Page ID="{842240F6-F77A-4421-B2F6-44510E03ABAB}{1}{E19483954550601460158520165992657368372596901}" name="Python beginner" dateTime="2021-12-21T07:51:12.000Z" lastModifiedTime="2021-12-21T07:52:20.000Z" pageLevel="1" />
+	</one:Section>
+	<one:SectionGroup name="Backend" ID="{72F6EE87-4B69-405F-A5A8-63FA2D683444}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend" lastModifiedTime="2021-12-21T07:57:54.000Z" isCurrentlyViewed="true">
+		<one:Section name="Go" ID="{B75B0FB1-6DB5-4ED2-9C69-4060F8FB7FF8}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend\Go.one" lastModifiedTime="2021-12-21T07:55:24.000Z" color="#EE9597" isCurrentlyViewed="true">
+			<one:Page ID="{B75B0FB1-6DB5-4ED2-9C69-4060F8FB7FF8}{1}{E1954863573282337301011917182284793899649511}" name="Chapter 1" dateTime="2021-12-21T07:50:59.000Z" lastModifiedTime="2021-12-21T07:55:24.000Z" pageLevel="1" isCurrentlyViewed="true" />
+		</one:Section>
+		<one:SectionGroup name="DotNet" ID="{6F8F683A-D9FE-4CDD-8605-8BAA00E742EA}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend\DotNet" lastModifiedTime="2021-12-21T07:57:54.000Z">
+			<one:Section name="CSharp" ID="{443F89FE-0C2F-41D2-8FCA-B54E1F45349B}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend\DotNet\CSharp.one" lastModifiedTime="2021-12-21T07:56:53.000Z" color="#91BAAE">
+				<one:Page ID="{443F89FE-0C2F-41D2-8FCA-B54E1F45349B}{1}{E19554024442055462406520137364240064103627971}" name="Office Addin" dateTime="2021-12-21T07:52:40.000Z" lastModifiedTime="2021-12-21T07:56:29.000Z" pageLevel="1" >
+					<one:Page ID="{443F89FE-0C2F-41D2-8FCA-B54E1F45349B}{1}{E19524986248993555224420161066687775526316971}" name="OneNote add-in" dateTime="2021-12-21T07:56:34.000Z" lastModifiedTime="2021-12-21T07:56:47.000Z" pageLevel="2" />
+				</one:Page>
+			</one:Section>
+			<one:Section name="FSharp" ID="{9CA0EF3E-A634-41E8-A1B7-821A01E657E2}{1}{B0}" path="C:\OneNote\UnitTestNote\Backend\DotNet\FSharp.one" lastModifiedTime="2021-12-21T07:57:54.000Z" color="#F6B078">
+				<one:Page ID="{9CA0EF3E-A634-41E8-A1B7-821A01E657E2}{1}{E1949968395446988629731972422109116520132061}" name="Data Analyzation" dateTime="2021-12-21T07:54:26.000Z" lastModifiedTime="2021-12-21T07:57:54.000Z" pageLevel="1" />				
+			</one:Section>
+		</one:SectionGroup>
+	</one:SectionGroup>
+</one:Notebook>

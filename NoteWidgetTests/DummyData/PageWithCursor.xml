@@ -1,0 +1,28 @@
+<one:Page xmlns:one="http://schemas.microsoft.com/office/onenote/2013/onenote" ID="{63DEAA34-59B6-4241-8D4D-DDE122531ABA}{1}{E1957636351534941033821993164913069263156761}" name="Diagram" dateTime="2022-01-19T14:35:06.000Z" lastModifiedTime="2022-01-20T05:43:55.000Z" pageLevel="1" isCurrentlyViewed="true" selected="partial" lang="en-US">
+  <one:QuickStyleDef index="0" name="PageTitle" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="20.0" spaceBefore="0.0" spaceAfter="0.0" />
+  <one:QuickStyleDef index="1" name="p" fontColor="automatic" highlightColor="automatic" font="Microsoft YaHei UI" fontSize="12.0" spaceBefore="0.0" spaceAfter="0.0" />
+  <one:PageSettings RTL="false" color="automatic">
+    <one:PageSize>
+      <one:Automatic />
+    </one:PageSize>
+    <one:RuleLines visible="false" />
+  </one:PageSettings>
+  <one:Title lang="en-US">
+    <one:OE author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" creationTime="2022-01-19T14:35:07.000Z" lastModifiedTime="2022-01-19T14:35:09.000Z" objectID="{5E565245-3EBA-46A3-8145-326508E77C77}{15}{B0}" alignment="left" quickStyleIndex="0" style="font-family:Calibri;font-size:20.0pt">
+      <one:T><![CDATA[Diagram]]></one:T>
+    </one:OE>
+  </one:Title>
+<one:Outline selected="partial" author="efrey kong" authorInitials="EK" lastModifiedBy="efrey kong" lastModifiedByInitials="EK" lastModifiedTime="2022-01-20T05:43:55.000Z" objectID="{2E610147-F123-4FE7-AFC6-E74AA12ACFE8}{61}{B0}">
+<one:Position x="36.0" y="86.4000015258789" z="0" />
+    <one:Size width="244.4419555664062" height="293.8119812011719" />
+    <one:OEChildren selected="partial">
+    <one:OE creationTime="2022-01-19T15:47:53.000Z" lastModifiedTime="2022-01-19T15:47:53.000Z" objectID="{8B9C63D8-7B85-47C3-BC3A-FC37AF064787}{34}{B0}" alignment="left" quickStyleIndex="1" selected="partial" style="font-family:Calibri;font-size:12.0pt;color:#1B1B2E" lang="zh-CN">
+        <one:T><![CDATA[<span
+style='background:#F8F8F8'>    A[Square Rect] -- L</span>]]></one:T>
+        <one:T selected="all"><![CDATA[]]></one:T>
+        <one:T><![CDATA[<span
+style='background:#F8F8F8'>ink text --&gt; B((Circle))</span>]]></one:T>
+      </one:OE>
+    </one:OEChildren>
+  </one:Outline>
+</one:Page>

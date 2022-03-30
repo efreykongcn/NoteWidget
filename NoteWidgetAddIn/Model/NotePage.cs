@@ -159,10 +159,7 @@ namespace NoteWidgetAddIn.Model
             {
                 if (item.Name.LocalName == "Outline")
                 {
-                    foreach (var oe in item.Elements(Namespace + "OEChildren").Elements(Namespace + "OE"))
-                    {
-                        AppendElementsInnerText(appender, oe);
-                    }
+                    AppendElementsInnerText(appender, item.Element(Namespace + "OEChildren"));
                 }
                 else if (item.Name.LocalName == "Image")
                 {
@@ -170,31 +167,31 @@ namespace NoteWidgetAddIn.Model
                     //TODO: Large image (more than 2MB) should be saved to file, not embedded in html content.
                     appender.AppendLine($"![]({ni.ToBase64Image()})");
                 }
-                else if (item.Name.LocalName == "T")
-                {
-                    var tr = new NoteTextRange(item);
-                    appender.AppendLine(tr.InnerText);
-                }
                 else if (item.Name.LocalName == "Table" && item.Attribute("hasHeaderRow")?.Value == "false")
                 {
                     foreach(var oe in item.Descendants(Namespace + "OE"))
                     {
-                        AppendElementsInnerText(appender, oe);
-                    }
-                }
-                else if (item.Name.LocalName == "OEChildren")
-                {
-                    foreach (var oe in item.Elements(Namespace + "OE"))
-                    {
-                        if (oe.Elements(Namespace + "T").Count() > 0)
+                        if (item.Elements(Namespace + "T").Count() > 0)
                         {
-                            var tr = new NoteTextRange(new XElement(Namespace + "T", new XCData(oe.Value)));
+                            var tr = new NoteTextRange(new XElement(Namespace + "T", new XCData(item.Value)));
                             appender.AppendLine(tr.InnerText);
                         }
                         else
                         {
-                            AppendElementsInnerText(appender, oe);
+                            AppendElementsInnerText(appender, item);
                         }
+                    }
+                }
+                else if (item.Name.LocalName == "OE")
+                {
+                    if (item.Elements(Namespace + "T").Count() > 0)
+                    {
+                        var tr = new NoteTextRange(new XElement(Namespace + "T", new XCData(item.Value)));
+                        appender.AppendLine(tr.InnerText);
+                    }
+                    else
+                    {
+                        AppendElementsInnerText(appender, item);
                     }
                 }
                 

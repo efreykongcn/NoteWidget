@@ -54,5 +54,21 @@ namespace NoteWidgetAddIn
             }
             Assert.IsTrue(System.IO.File.Exists(filePath));
         }
+        [TestMethod]
+        public async Task TestWebView2()
+        {
+            var browser = new WebBrowserWindow();
+            browser.BrowserHtmlContent = "<html><head></head><body><div id=\"content\"><span>Hello world!</span></div></body></html>";
+            browser.webBrowser.NavigationCompleted += async delegate {
+                var result = await browser.webBrowser.ExecuteScriptAsync("document.getElementById('content').innerHTML;");
+                Console.WriteLine(result);
+                await browser.webBrowser.ExecuteScriptAsync("document.getElementById('content').outerHTML = '<span>I am changed</span>';");
+            };
+
+            browser.Show();
+            var app = new System.Windows.Application();
+            app.MainWindow = browser;
+            app.Run();
+        }
     }
 }

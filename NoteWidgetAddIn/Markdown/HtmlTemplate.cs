@@ -22,15 +22,18 @@ namespace NoteWidgetAddIn.Markdown
         <meta http-equiv=""X-UA-Compatible"" content=""IE=Edge"" />
         <meta charset=""utf-8"" />
         {{HeadContent}}
+        <style>.widget-container{min-width:1000px;}#___markdown-content___ {min-width:400px;max-width:900px;margin: 0 auto; padding:20px;}</style>
         <title>{{Title}}</title>
     </head>
     <body>
-        <div id=""___markdown-content___"" class=""markdown-body"">";
+        <div class=""widget-container"">
+        <div id=""___markdown-content___"" class=""markdown-body""><article>";
         private const string HTML_FOOT = @"
-        </div>        
+        </article></div>
         <footer class=""notewidget-footer"">
             <p>{{footer}}</p>
         </footer>
+        </div>
         {{FootContent}}
     </body>
 </html>

@@ -106,5 +106,29 @@ namespace NoteWidgetAddIn.Properties {
                 this["Markdown_CheatSheet_Height"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Markdown_Preview_Left {
+            get {
+                return ((double)(this["Markdown_Preview_Left"]));
+            }
+            set {
+                this["Markdown_Preview_Left"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public double Markdown_Preview_Top {
+            get {
+                return ((double)(this["Markdown_Preview_Top"]));
+            }
+            set {
+                this["Markdown_Preview_Top"] = value;
+            }
+        }
     }
 }

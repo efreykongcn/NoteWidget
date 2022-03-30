@@ -1,0 +1,3 @@
+Git remote:
+  "origin": github.com
+  "gitee": gitee.com

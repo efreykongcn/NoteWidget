@@ -72,13 +72,13 @@ namespace NoteWidgetAddIn.Export
         {
             if (parentNode.NodeType == NodeType.Page)
             {
-                var file = Path.Combine(hierarchyFolderPath, parentNode.Name + FileExtension);
+                var file = Path.Combine(hierarchyFolderPath, PathHelper.MakeValidFileName(parentNode.Name) + FileExtension);
                 CreatePageFile(parentNode.ID, file);
             }
             string currentFolderPath;
             if (parentNode.NodeType != NodeType.Page || (parentNode.NodeType == NodeType.Page && parentNode.Children.Count > 0))
             {
-                currentFolderPath = PathHelper.MakeUniqueFolderName(Path.Combine(hierarchyFolderPath, parentNode.Name));
+                currentFolderPath = PathHelper.MakeUniqueFolderName(Path.Combine(hierarchyFolderPath, PathHelper.MakeValidFileName(parentNode.Name)));
                 Directory.CreateDirectory(currentFolderPath);
             }
             else
@@ -99,13 +99,14 @@ namespace NoteWidgetAddIn.Export
             NoteNode tmp = node;
             while (tmp != null)
             {
+                var nodeName = PathHelper.MakeValidFileName(tmp.Name);
                 if (fileNameBuilder.Length == 0)
                 {
-                    fileNameBuilder.Append(tmp.Name);
+                    fileNameBuilder.Append(nodeName);
                 }
                 else
                 {
-                    fileNameBuilder.Insert(0, tmp.Name + seperatorChar.ToString());
+                    fileNameBuilder.Insert(0, nodeName + seperatorChar.ToString());
                 }
                 tmp = tmp.Parent;
             }

@@ -55,7 +55,7 @@ namespace NoteWidgetAddIn
             Assert.IsTrue(System.IO.File.Exists(filePath));
         }
         [TestMethod]
-        public async Task TestWebView2()
+        public void TestWebView2()
         {
             var browser = new WebBrowserWindow();
             browser.BrowserHtmlContent = "<html><head></head><body><div id=\"content\"><span>Hello world!</span></div></body></html>";

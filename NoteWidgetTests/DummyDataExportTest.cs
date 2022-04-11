@@ -60,11 +60,11 @@ namespace NoteWidgetAddIn
             Console.WriteLine(path);
             var di = new DirectoryInfo(path);
 
-            var xe = GetDummyExpectedNotebookXDoc();
+            var xeExpected = GetDummyExpectedNotebookXDoc();
             FileInfo[] fs;
             fs = di.GetFiles("*.*", SearchOption.AllDirectories);
             DirectoryInfo[] ds = di.GetDirectories("*", SearchOption.AllDirectories);
-            var dlist = xe.Descendants().Where(e => e.Name.LocalName != "Page" && e.Name.LocalName != "Notebook").Select(e => e.Attribute("name").Value).ToList();
+            var dlist = xeExpected.Descendants().Where(e => e.Name.LocalName != "Page" && e.Name.LocalName != "Notebook").Select(e => e.Attribute("name").Value).ToList();
             foreach (var d in dlist)
             {
                 Assert.IsTrue(ds.Any(e => e.Name == d));
@@ -72,7 +72,7 @@ namespace NoteWidgetAddIn
 
             string fileExtension = ExportHelper.GetExportFormatFileExtension(fileFormat);
 
-            var plist = xe.Descendants(xe.Root.Name.Namespace + "Page").Select(e => e.Attribute("name").Value + fileExtension).ToList();
+            var plist = xeExpected.Descendants(xeExpected.Root.Name.Namespace + "Page").Select(e => e.Attribute("name").Value + fileExtension).ToList();
             Assert.AreEqual(fs.Length, plist.Count);
             foreach (var f in fs)
             {

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Efrey Kong. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
+using System;
 using System.IO;
 using System.Text.RegularExpressions;
 
@@ -30,23 +31,37 @@ namespace NoteWidgetAddIn
 
         public static string MakeUniqueFolderName(string fullFolderName)
         {
-            var currentPath = fullFolderName;
-            if (Directory.Exists(currentPath))
+            return MakeUniquePath(fullFolderName, 
+                d => { return Directory.Exists(d); },
+                (d, i) => { return d + " (" + i.ToString() + ")"; });
+        }
+
+        public static string MakeUniqueFileName(string filePath)
+        {
+            return MakeUniquePath(filePath,
+                p => { return File.Exists(p); },
+                (p, i) => { return Path.Combine(Path.GetDirectoryName(filePath), Path.GetFileNameWithoutExtension(p) + " (" + i.ToString() + ")" + Path.GetExtension(p)); });
+        }
+
+        private static string MakeUniquePath(string path, Func<string, bool> checkPathExists, Func<string, int, string> makeNewPath)
+        {
+            var currentPath = path;
+            if (checkPathExists(currentPath))
             {
-                int i = 1;
-                while (true)
+                var i = 1;
+                while(true)
                 {
-                    currentPath = fullFolderName + " (" +i.ToString() + ")";
-                    if (!Directory.Exists(currentPath))
+                    currentPath = makeNewPath(path, i);
+                    if(!checkPathExists(currentPath))
                     {
                         break;
                     }
                     i++;
                 }
             }
-
             return currentPath;
         }
+
         /// <summary>
         /// Returns virtual host root path start with <code>file:///</code> protocol.
         /// </summary>

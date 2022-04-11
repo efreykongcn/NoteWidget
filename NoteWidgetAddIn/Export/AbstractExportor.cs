@@ -60,7 +60,7 @@ namespace NoteWidgetAddIn.Export
                     foreach (var node in rootNode.Descendants(n => n.NodeType == NodeType.Page))
                     {
                         var filePath = Path.Combine(rootPath, GetFullPathNodeName(node, '_') + FileExtension);
-                        CreatePageFile(node.ID, filePath);
+                        CreatePageFile(node.ID, PathHelper.MakeUniqueFileName(filePath));
                     }
                     return rootPath;
                 }
@@ -73,7 +73,7 @@ namespace NoteWidgetAddIn.Export
             if (parentNode.NodeType == NodeType.Page)
             {
                 var file = Path.Combine(hierarchyFolderPath, PathHelper.MakeValidFileName(parentNode.Name) + FileExtension);
-                CreatePageFile(parentNode.ID, file);
+                CreatePageFile(parentNode.ID, PathHelper.MakeUniqueFileName(file));
             }
             string currentFolderPath;
             if (parentNode.NodeType != NodeType.Page || (parentNode.NodeType == NodeType.Page && parentNode.Children.Count > 0))

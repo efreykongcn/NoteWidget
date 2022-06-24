@@ -14,6 +14,7 @@ namespace NoteWidgetAddIn
 {
     public sealed class NoteApplication : IDisposable
     {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
         #region Helpers
         private class SimpleWin32Window : System.Windows.Forms.IWin32Window
         {
@@ -138,6 +139,7 @@ namespace NoteWidgetAddIn
         public void Dispose()
         {
             _application = null;
+            Logger.Debug($"NoteApplication Disposed. Hash: {this.GetHashCode()}");
         }
         #endregion        
     }

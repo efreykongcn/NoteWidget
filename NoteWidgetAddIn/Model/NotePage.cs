@@ -119,9 +119,11 @@ namespace NoteWidgetAddIn.Model
             }
             Root = xelement;
             PageID = Root.Attribute("ID").Value;
+            LastModifiedTime = Root.Attribute("lastModifiedTime").Value;
             Namespace = Root.Name.Namespace;
         }
         public string PageID { get;}
+        public string LastModifiedTime { get; }
         public XElement Root { get;}
         /// <summary>
         /// Root Namespace

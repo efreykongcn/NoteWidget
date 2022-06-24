@@ -5,30 +5,71 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using NoteWidgetAddIn.RibbonCommand.Markdown;
 using NoteWidgetAddIn.Markdown;
+using NoteWidgetAddIn.Model;
+using NoteWidgetAddIn.RibbonCommand.Markdown;
 
 namespace NoteWidgetAddIn.RibbonCommand
 {
     internal class PreviewMarkdownCommand : Command
     {
-        private static IDictionary<int, WebBrowserWindow> windowContainer = new Dictionary<int, WebBrowserWindow>();
+        #region PreviewWindowHolder
+        class PreviewWindowHolder
+        {
+            public PreviewWindowHolder(string pageID, string pageLastModifiedTime, WebBrowserWindow previewWindow)
+            {
+                PageID = pageID;
+                PageLastModifiedTime = pageLastModifiedTime;
+                PreviewWindow = previewWindow;
+            }
+
+            public string PageID { get; set; }
+            public string PageLastModifiedTime { get; set; }
+            public WebBrowserWindow PreviewWindow { get; }
+        }
+        #endregion
+
+        private static Dictionary<int, PreviewWindowHolder> windowContainer = new Dictionary<int, PreviewWindowHolder>();
         public override async Task ExecuteAsync(params object[] args)
         {
+            await PreviewCurrentNotePage();
+        }
+
+        private async Task PreviewCurrentNotePage()
+        { 
             var settings = Properties.Settings.Default;
-            if (TryGetPageContent(out var htmlContent))
+            if (TryGetCurrentNotePage(out var notePage))
             {
-                if (settings.Markdown_Preview_Singleton && windowContainer.Count > 0)
+                var existedHolder = windowContainer.Select(c => c.Value).FirstOrDefault(c => c.PageID == notePage.PageID);
+                if (existedHolder != null)
                 {
-                    var window = windowContainer.First().Value;
-                    window.Dispatcher.Invoke(() =>
+                    if (existedHolder.PageLastModifiedTime == notePage.LastModifiedTime)
                     {
-                        window.BrowserHtmlContent = htmlContent;
-                        window.RefreshBrowser();
+                        return;
+                    }
+                    existedHolder.PageLastModifiedTime = notePage.LastModifiedTime;
+                    var htmlContent = GetHtmlContent(notePage);
+                    existedHolder.PreviewWindow.Dispatcher.Invoke(() =>
+                    {
+                        existedHolder.PreviewWindow.BrowserHtmlContent = htmlContent;
+                        existedHolder.PreviewWindow.RefreshBrowser();
+                    });
+                }
+                else if (settings.Markdown_Preview_Singleton && windowContainer.Count > 0)
+                {
+                    var holder = windowContainer.First().Value;
+                    holder.PageID = notePage.PageID;
+                    holder.PageLastModifiedTime = notePage.LastModifiedTime;
+                    var htmlContent = GetHtmlContent(notePage);
+                    holder.PreviewWindow.Dispatcher.Invoke(() =>
+                    {
+                        holder.PreviewWindow.BrowserHtmlContent = htmlContent;
+                        holder.PreviewWindow.RefreshBrowser();
                     });
                 }
                 else
                 {
+                    var htmlContent = GetHtmlContent(notePage);
                     await WpfAddInApplication.Current.BeginInvoke(() =>
                     {
                         var window = new WebBrowserWindow();
@@ -36,6 +77,19 @@ namespace NoteWidgetAddIn.RibbonCommand
                         window.BrowserHtmlContent = htmlContent;
                         var helper = new System.Windows.Interop.WindowInteropHelper(window);
                         helper.Owner = OwnerWin32Window.Handle;
+
+                        window.KeyDown += (s, e) =>
+                        {
+                            //Refresh
+                            if (e.Key == System.Windows.Input.Key.F5)
+                            {
+                                Task.Run(async () =>
+                                {
+                                    await PreviewCurrentNotePage();
+                                });
+                            }
+                        };
+
                         window.Closed += (s, e) =>
                         {
                             var key = window.GetHashCode();
@@ -44,34 +98,104 @@ namespace NoteWidgetAddIn.RibbonCommand
                                 windowContainer.Remove(key);
                             }
                         };
-                        windowContainer.Add(window.GetHashCode(), window);
+
+                        windowContainer.Add(window.GetHashCode(), new PreviewWindowHolder(notePage.PageID, notePage.LastModifiedTime, window));
                         window.Show();
                     });
                 }
             }
             await Task.Yield();
         }
-        private bool TryGetPageContent(out string htmlContent)
+
+        private string GetHtmlContent(NotePage page)
+        {
+            var htmlBody = MarkdownHelper.MarkdownToHtml(page.ContentInnerText);
+            return HtmlTemplate.LocalResourceTemplate.ToHtml(page.Title.InnerText, htmlBody);
+        }
+
+        private bool TryGetCurrentNotePage(out NotePage currentNotePage)
         {
             try
             {
-                string title, markdownText;
                 using (var app = Context.CreateApplication())
                 {
-                    var page = app.GetCurrentNotePage();
-                    title = page.Title.InnerText;
-                    markdownText = page.ContentInnerText;
+                    currentNotePage = app.GetCurrentNotePage();
                 }
-                var htmlBody = MarkdownHelper.MarkdownToHtml(markdownText);
-                htmlContent = HtmlTemplate.LocalResourceTemplate.ToHtml(title, htmlBody);
+                if (currentNotePage == null)
+                {
+                    return false;
+                }
                 return true;
             }
             catch (Exception ex)
             {
                 Logger.Error(ex);
             }
-            htmlContent = null;
+
+            currentNotePage = null;
             return false;
         }
+
+        //private static IDictionary<int, WebBrowserWindow> windowContainer = new Dictionary<int, WebBrowserWindow>();
+        //public override async Task ExecuteAsync(params object[] args)
+        //{
+        //    var settings = Properties.Settings.Default;
+        //    if (TryGetPageContent(out var htmlContent))
+        //    {
+        //        if (settings.Markdown_Preview_Singleton && windowContainer.Count > 0)
+        //        {
+        //            var window = windowContainer.First().Value;
+        //            window.Dispatcher.Invoke(() =>
+        //            {
+        //                window.BrowserHtmlContent = htmlContent;
+        //                window.RefreshBrowser();
+        //            });
+        //        }
+        //        else
+        //        {
+        //            await WpfAddInApplication.Current.BeginInvoke(() =>
+        //            {
+        //                var window = new WebBrowserWindow();
+        //                window.RememberMeIdentifier = "Markdown_Preview";
+        //                window.BrowserHtmlContent = htmlContent;
+        //                var helper = new System.Windows.Interop.WindowInteropHelper(window);
+        //                helper.Owner = OwnerWin32Window.Handle;
+        //                window.Closed += (s, e) =>
+        //                {
+        //                    var key = window.GetHashCode();
+        //                    if (windowContainer.ContainsKey(key))
+        //                    {
+        //                        windowContainer.Remove(key);
+        //                    }
+        //                };
+        //                windowContainer.Add(window.GetHashCode(), window);
+        //                window.Show();
+        //            });
+        //        }
+        //    }
+        //    await Task.Yield();
+        //}
+        //private bool TryGetPageContent(out string htmlContent)
+        //{
+        //    try
+        //    {
+        //        string title, markdownText;
+        //        using (var app = Context.CreateApplication())
+        //        {
+        //            var page = app.GetCurrentNotePage();
+        //            title = page.Title.InnerText;
+        //            markdownText = page.ContentInnerText;
+        //        }
+        //        var htmlBody = MarkdownHelper.MarkdownToHtml(markdownText);
+        //        htmlContent = HtmlTemplate.LocalResourceTemplate.ToHtml(title, htmlBody);
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Logger.Error(ex);
+        //    }
+        //    htmlContent = null;
+        //    return false;
+        //}
     }
 }

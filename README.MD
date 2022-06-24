@@ -17,6 +17,10 @@ A full featured Markdown viwer with syntax highlighting, export enhancement for 
   - Process, sequence, Gantt diagram etc. 
 - Capturing picture in onenote page and display in Markdown viewer
 - Preview Window Refresh (Press `F5`. 24/6/2022)
+- Auto refresh Preview Window (24/6/2022)  
+    - Auto refresh Preview Window every 1 second by default  
+    - Set interval to a large number in Settings Window to disable auto refresh, let's say set interval to 999999999.  
+
 ## Markdown CheatSheet
 - Common mark
 - Extended mark

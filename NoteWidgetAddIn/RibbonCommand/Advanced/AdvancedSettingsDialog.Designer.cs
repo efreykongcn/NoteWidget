@@ -41,8 +41,13 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
             this.label2 = new System.Windows.Forms.Label();
             this.tabWidget = new System.Windows.Forms.TabControl();
             this.tabPreviewPage = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.udRefreshInterval = new System.Windows.Forms.NumericUpDown();
             this.tabWidget.SuspendLayout();
             this.tabPreviewPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udRefreshInterval)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +77,7 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
             // cbSameWindowPreview
             // 
             this.cbSameWindowPreview.AutoSize = true;
-            this.cbSameWindowPreview.Location = new System.Drawing.Point(147, 86);
+            this.cbSameWindowPreview.Location = new System.Drawing.Point(147, 120);
             this.cbSameWindowPreview.Name = "cbSameWindowPreview";
             this.cbSameWindowPreview.Size = new System.Drawing.Size(247, 23);
             this.cbSameWindowPreview.TabIndex = 3;
@@ -81,9 +86,10 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(315, 190);
+            this.btnSave.Location = new System.Drawing.Point(315, 210);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 30);
             this.btnSave.TabIndex = 4;
@@ -92,9 +98,10 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(425, 190);
+            this.btnCancel.Location = new System.Drawing.Point(425, 210);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(90, 30);
             this.btnCancel.TabIndex = 5;
@@ -133,12 +140,16 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
             this.tabWidget.Location = new System.Drawing.Point(4, 4);
             this.tabWidget.Name = "tabWidget";
             this.tabWidget.SelectedIndex = 0;
-            this.tabWidget.Size = new System.Drawing.Size(516, 175);
+            this.tabWidget.Size = new System.Drawing.Size(516, 196);
             this.tabWidget.TabIndex = 7;
             // 
             // tabPreviewPage
             // 
             this.tabPreviewPage.BackColor = System.Drawing.Color.White;
+            this.tabPreviewPage.Controls.Add(this.udRefreshInterval);
+            this.tabPreviewPage.Controls.Add(this.label5);
+            this.tabPreviewPage.Controls.Add(this.label4);
+            this.tabPreviewPage.Controls.Add(this.label3);
             this.tabPreviewPage.Controls.Add(this.cmbHighlightTheme);
             this.tabPreviewPage.Controls.Add(this.label1);
             this.tabPreviewPage.Controls.Add(this.label2);
@@ -147,9 +158,61 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
             this.tabPreviewPage.Location = new System.Drawing.Point(4, 28);
             this.tabPreviewPage.Name = "tabPreviewPage";
             this.tabPreviewPage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPreviewPage.Size = new System.Drawing.Size(508, 143);
+            this.tabPreviewPage.Size = new System.Drawing.Size(508, 164);
             this.tabPreviewPage.TabIndex = 0;
             this.tabPreviewPage.Text = "Markdown";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 90);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 19);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Refresh Preview: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(143, 92);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 19);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Every ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(303, 90);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 19);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Seconds";
+            // 
+            // udRefreshInterval
+            // 
+            this.udRefreshInterval.Location = new System.Drawing.Point(196, 88);
+            this.udRefreshInterval.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.udRefreshInterval.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.udRefreshInterval.Name = "udRefreshInterval";
+            this.udRefreshInterval.Size = new System.Drawing.Size(100, 26);
+            this.udRefreshInterval.TabIndex = 10;
+            this.udRefreshInterval.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // AdvancedSettingsDialog
             // 
@@ -158,7 +221,7 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(523, 241);
+            this.ClientSize = new System.Drawing.Size(523, 251);
             this.Controls.Add(this.tabWidget);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -176,6 +239,7 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
             this.tabWidget.ResumeLayout(false);
             this.tabPreviewPage.ResumeLayout(false);
             this.tabPreviewPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udRefreshInterval)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,5 +255,9 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabWidget;
         private System.Windows.Forms.TabPage tabPreviewPage;
+        private System.Windows.Forms.NumericUpDown udRefreshInterval;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

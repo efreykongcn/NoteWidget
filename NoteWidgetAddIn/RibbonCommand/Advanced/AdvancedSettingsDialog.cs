@@ -3,13 +3,6 @@
 
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using NLog;
 using NoteWidgetAddIn.Markdown;
@@ -40,6 +33,7 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
                 settings.Markdown_Preview_Singleton = cbSameWindowPreview.Checked;
                 settings.Markdown_ColorScheme = cmbColorScheme.SelectedValue.ToString();
                 settings.Markdown_HighlightTheme = cmbHighlightTheme.SelectedValue.ToString();
+                settings.Markdown_PreviewRefresh_Interval = (int)udRefreshInterval.Value;
                 settings.Save();
                 HtmlTemplate.BuildDefaultTemplates();
             }
@@ -60,6 +54,7 @@ namespace NoteWidgetAddIn.RibbonCommand.Advanced
             {
                 var settings = Properties.Settings.Default;
                 cbSameWindowPreview.Checked = settings.Markdown_Preview_Singleton;
+                udRefreshInterval.Value = settings.Markdown_PreviewRefresh_Interval;
                 //
                 var schemes = (ColorScheme[])Enum.GetValues(typeof(ColorScheme));
                 cmbColorScheme.DisplayMember = "Text";

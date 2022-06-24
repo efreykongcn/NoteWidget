@@ -29,18 +29,18 @@ namespace NoteWidgetAddIn.RibbonCommand
         }
         #endregion
 
-        private static Dictionary<int, PreviewWindowHolder> windowContainer = new Dictionary<int, PreviewWindowHolder>();
+        private static Dictionary<int, PreviewWindowHolder> _windowContainer = new Dictionary<int, PreviewWindowHolder>();
         public override async Task ExecuteAsync(params object[] args)
         {
-            await PreviewCurrentNotePage();
+            await PreviewCurrentNotePage(false);
         }
 
-        private async Task PreviewCurrentNotePage()
+        private async Task PreviewCurrentNotePage(bool isRefresh)
         { 
             var settings = Properties.Settings.Default;
             if (TryGetCurrentNotePage(out var notePage))
             {
-                var existedHolder = windowContainer.Select(c => c.Value).FirstOrDefault(c => c.PageID == notePage.PageID);
+                var existedHolder = _windowContainer.Select(c => c.Value).FirstOrDefault(c => c.PageID == notePage.PageID);
                 if (existedHolder != null)
                 {
                     if (existedHolder.PageLastModifiedTime == notePage.LastModifiedTime)
@@ -55,9 +55,9 @@ namespace NoteWidgetAddIn.RibbonCommand
                         existedHolder.PreviewWindow.RefreshBrowser();
                     });
                 }
-                else if (settings.Markdown_Preview_Singleton && windowContainer.Count > 0)
+                else if (settings.Markdown_Preview_Singleton && _windowContainer.Count > 0)
                 {
-                    var holder = windowContainer.First().Value;
+                    var holder = _windowContainer.First().Value;
                     holder.PageID = notePage.PageID;
                     holder.PageLastModifiedTime = notePage.LastModifiedTime;
                     var htmlContent = GetHtmlContent(notePage);
@@ -78,6 +78,15 @@ namespace NoteWidgetAddIn.RibbonCommand
                         var helper = new System.Windows.Interop.WindowInteropHelper(window);
                         helper.Owner = OwnerWin32Window.Handle;
 
+                        var interval = settings.Markdown_PreviewRefresh_Interval;
+                        window.InitTimer(new TimeSpan(0, 0, interval), () =>
+                        {
+                            Task.Run(async () =>
+                            {
+                                await PreviewCurrentNotePage(isRefresh: true);
+                            });
+                        });
+
                         window.KeyDown += (s, e) =>
                         {
                             //Refresh
@@ -85,7 +94,7 @@ namespace NoteWidgetAddIn.RibbonCommand
                             {
                                 Task.Run(async () =>
                                 {
-                                    await PreviewCurrentNotePage();
+                                    await PreviewCurrentNotePage(isRefresh: true);
                                 });
                             }
                         };
@@ -93,13 +102,13 @@ namespace NoteWidgetAddIn.RibbonCommand
                         window.Closed += (s, e) =>
                         {
                             var key = window.GetHashCode();
-                            if (windowContainer.ContainsKey(key))
+                            if (_windowContainer.ContainsKey(key))
                             {
-                                windowContainer.Remove(key);
+                                _windowContainer.Remove(key);
                             }
                         };
 
-                        windowContainer.Add(window.GetHashCode(), new PreviewWindowHolder(notePage.PageID, notePage.LastModifiedTime, window));
+                        _windowContainer.Add(window.GetHashCode(), new PreviewWindowHolder(notePage.PageID, notePage.LastModifiedTime, window));
                         window.Show();
                     });
                 }

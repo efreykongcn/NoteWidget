@@ -9,6 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 using Microsoft.Web.WebView2.Core;
 using NLog;
 
@@ -20,6 +21,9 @@ namespace NoteWidgetAddIn.RibbonCommand.Markdown
     public partial class WebBrowserWindow : Window
     {
         private static readonly ILogger _logger = LogManager.GetCurrentClassLogger();
+
+        private DispatcherTimer _timer;
+        private bool _timerInitialized = false;
         public WebBrowserWindow()
         {
             InitializeComponent();
@@ -29,8 +33,25 @@ namespace NoteWidgetAddIn.RibbonCommand.Markdown
             webBrowser.NavigationCompleted += WebBrowser_NavigationCompleted;
         }
 
+        public void InitTimer(TimeSpan interval, Action callback)
+        {
+            if (_timerInitialized)
+            {
+                throw new InvalidOperationException("Timer has been initialized already.");
+            }
+            _timer = new DispatcherTimer();
+            _timer.Interval = interval;
+            _timer.Tick += (s, e) =>
+            {
+                callback();
+            };
+            _timer.Start();
+            _timerInitialized = true;
+        }
+
         private void WebBrowserWindow_Closed(object sender, EventArgs e)
         {
+            _timer.Stop();
             SaveWindowPropertiesIfRequired();
         }
 

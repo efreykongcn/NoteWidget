@@ -16,6 +16,7 @@ A full featured Markdown viwer with syntax highlighting, export enhancement for 
 - [Mermaid](https://github.com/mermaid-js/mermaid) chart support
   - Process, sequence, Gantt diagram etc. 
 - Capturing picture in onenote page and display in Markdown viewer
+- Preview Window Refresh (Press `F5`. 24/6/2022)
 ## Markdown CheatSheet
 - Common mark
 - Extended mark

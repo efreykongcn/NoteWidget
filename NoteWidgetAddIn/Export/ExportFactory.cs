@@ -1,13 +1,7 @@
 ﻿// Copyright (c) Efrey Kong. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System;
-using System.IO;
-using System.Text;
-using System.Xml.Linq;
-using Microsoft.Office.Interop.OneNote;
 using NoteWidgetAddIn.Export;
-using NoteWidgetAddIn.Model;
 
 namespace NoteWidgetAddIn
 {

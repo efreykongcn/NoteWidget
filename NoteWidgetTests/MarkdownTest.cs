@@ -1,18 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NoteWidgetAddIn.Markdown;
 using NoteWidgetAddIn.RibbonCommand.Markdown;
-using NoteWidgetAddIn.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.Xml.Linq;
-using NoteWidgetAddIn.RibbonCommand.Advanced;
-using NoteWidgetAddIn.Markdown;
 
 namespace NoteWidgetAddIn
 {

@@ -1,8 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NoteWidgetAddIn.Model;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Efrey Kong. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using System;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NLog;

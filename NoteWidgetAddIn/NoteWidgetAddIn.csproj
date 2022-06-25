@@ -229,16 +229,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack">
-      <Version>1.11.40</Version>
+      <Version>1.11.43</Version>
     </PackageReference>
     <PackageReference Include="Markdig">
-      <Version>0.26.0</Version>
+      <Version>0.30.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Web.WebView2">
-      <Version>1.0.1054.31</Version>
+      <Version>1.0.1245.22</Version>
     </PackageReference>
     <PackageReference Include="NLog">
-      <Version>4.7.13</Version>
+      <Version>5.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -252,4 +252,9 @@ taskkill /fi "pid gt 0" /im ONENOTE.exe
 call C:\Users\efrey\source\Github\OneNoteWidget\powershell-copyfile-runas.bat "$(TargetPath)" "C:\Program Files (x86)\EKStudio\NoteWidget\$(TargetFileName)"
 )</PostBuildEvent>
   </PropertyGroup>
+  <Target Name="BuiltProjectOutputGroupDependencies" DependsOnTargets="$(BuiltProjectOutputGroupDependenciesDependsOn)" Returns="@(BuiltProjectOutputGroupDependency)">
+    <ItemGroup>
+      <BuiltProjectOutputGroupDependency Include="@(ReferenceCopyLocalPaths->'%(FullPath)');&#xD;&#xA;                                              @(ReferenceDependencyPaths->'%(FullPath)');&#xD;&#xA;                                              @(NativeReferenceFile->'%(FullPath)');&#xD;&#xA;                                              @(_DeploymentLooseManifestFile->'%(FullPath)');&#xD;&#xA;                                              @(ResolvedIsolatedComModules->'%(FullPath)')" />
+    </ItemGroup>
+  </Target>
 </Project>

@@ -1,11 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NoteWidgetAddIn.RibbonCommand;
 using NoteWidgetAddIn.Model;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace NoteWidgetAddIn
 {

@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Efrey Kong. All Rights Reserved.
 // Licensed under the Apache License, Version 2.0.
 
-using NoteWidgetAddIn.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +10,8 @@ using System.IO;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Windows.Media;
-using System.Xml.Linq;
+using NoteWidgetAddIn.Model;
 
 namespace NoteWidgetAddIn
 {

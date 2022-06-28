@@ -51,7 +51,10 @@ namespace NoteWidgetAddIn.RibbonCommand.Markdown
 
         private void WebBrowserWindow_Closed(object sender, EventArgs e)
         {
-            _timer.Stop();
+            if (_timerInitialized)
+            {
+                _timer?.Stop();
+            }
             SaveWindowPropertiesIfRequired();
         }
 

@@ -1,7 +1,7 @@
 # OneNote Widget AddIn
 
 
-A full featured Markdown viwer with syntax highlighting, export enhancement for OneNote
+A full featured Markdown viewer with syntax highlighting, export enhancement for OneNote
 
 # Features
 
